@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Home';
+import Skeleton from './Skeleton';
 
 ReactDOM.render(
   <div>
     <h1>Naturexkursionen</h1>
-    <Home />
+    <Skeleton />
   </div>,
   document.getElementById('root')
 );

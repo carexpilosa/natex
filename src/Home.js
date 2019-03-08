@@ -11,12 +11,23 @@ export default class Home extends React.Component {
         <Router>
           <div>
             <p>
-              <Link to='/event1'>Event1</Link>
+              <Link
+                to='/event1'
+                query={{ bla: 'hurzq' }}
+                params={{ bla: 'hurzp' }}
+              >
+                Event1
+              </Link>
             </p>
             <p>
               <Link to='/eventlinks'>EventLinks</Link>
             </p>
-            <Route path='/event1' component={Event1} />
+            <Route
+              path='/event1'
+              render={props => {
+                return <Event1 title={'TITLE OF EVENT 1'} isAuthed={true} />;
+              }}
+            />
             <Route path='/eventlinks' component={EventLinks} />
           </div>
         </Router>

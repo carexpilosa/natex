@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SubComponent from './SubComponent';
+import Home from './Home';
 
 ReactDOM.render(
   <div>
-    <h1>*** Roller ***</h1>
-    <SubComponent />
+    <h1>Naturexkursionen</h1>
+    <Home />
   </div>,
   document.getElementById('root')
 );

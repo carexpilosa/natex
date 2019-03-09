@@ -9,3 +9,11 @@ div {
 #header > h2 {
   margin-bottom: 6px;
 }
+
+.link {
+  background-color: 'lightseagreen';
+}
+
+.nolink {
+  background-color: 'red';
+}

@@ -5,7 +5,8 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subVisible: false
+      subVisible: false,
+      pathname: props.location.pathname
     };
   }
   render() {
@@ -17,6 +18,10 @@ class Menu extends React.Component {
     );
   }
 
+  static getDerivedStateFromProps(nextProps) {
+    return { pathname: nextProps.location.pathname };
+  }
+
   _onMouseOver(e) {
     e.target.style.backgroundColor = 'red';
   }
@@ -26,15 +31,18 @@ class Menu extends React.Component {
   }
 
   renderMainMenu() {
+    const { pathname } = this.state;
     return (
       <div id='mainMenu'>
         <div>
           <Link
-            className={
-              this.props.location.pathname === 'elinks' ? 'link' : 'nolink'
+            className={pathname === 'elinks' ? 'link' : 'nolink'}
+            onMouseOver={e =>
+              pathname !== '/elinks' ? this._onMouseOver(e) : undefined
             }
-            onMouseOver={e => this._onMouseOver(e)}
-            onMouseOut={e => this._onMouseOut(e)}
+            onMouseOut={e =>
+              pathname !== '/elinks' ? this._onMouseOut(e) : undefined
+            }
             to='/elinks'
           >
             eventLinks
@@ -72,7 +80,6 @@ class Menu extends React.Component {
   }
 
   renderSubMenu() {
-    console.log(this.props.location.pathname);
     return (
       <div id='subMenu'>{this.state.subVisible && <div>subMenu</div>}</div>
     );

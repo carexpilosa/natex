@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
 import Home from './Home';
 import EventLinks from './EventLinks';
@@ -18,15 +18,13 @@ class App extends React.Component {
             <Route path='/elinks' component={EventLinks} />
             <Route
               path='/event1'
-              render={props => {
-                return (
-                  <Event1
-                    title={'Frühlingssonne im Biesenthaler Becken'}
-                    date={'2019-03-24'}
-                    isAuthed={true}
-                  />
-                );
-              }}
+              render={() => (
+                <Event1
+                  title={'Frühlingssonne im Biesenthaler Becken'}
+                  date={'2019-03-24'}
+                  isAuthed={true}
+                />
+              )}
             />
             <Route component={Home} />
           </Switch>

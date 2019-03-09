@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Event1 extends React.Component {
+class Event1 extends React.Component {
   render() {
     return (
       <div>
@@ -39,3 +39,5 @@ export default class Event1 extends React.Component {
     );
   }
 }
+
+export default Event1;

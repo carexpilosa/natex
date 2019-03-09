@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import EventLinks from './EventLinks';
 import Event1 from './Event1';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <div>
@@ -12,3 +12,5 @@ export default class Home extends React.Component {
     );
   }
 }
+
+export default Home;

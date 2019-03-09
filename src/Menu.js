@@ -1,7 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import EventLinks from './EventLinks';
-import Event1 from './Event1';
+import { Link } from 'react-router-dom';
 
 class Menu extends React.Component {
   constructor(props) {

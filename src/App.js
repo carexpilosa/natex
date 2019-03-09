@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
 import Home from './Home';
 import EventLinks from './EventLinks';
@@ -10,7 +10,7 @@ import './styles.css';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div>
           <Header />
           <Menu />
@@ -29,7 +29,7 @@ class App extends React.Component {
             <Route component={Home} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }

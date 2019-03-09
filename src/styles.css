@@ -1,0 +1,11 @@
+div {
+  background-color: #eeeeee;
+}
+
+#mainMenu > div > a {
+  background-color: lightseagreen;
+}
+
+#header > h2 {
+  margin-bottom: 6px;
+}

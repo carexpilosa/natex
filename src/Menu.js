@@ -7,7 +7,7 @@ class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      subVisible: true
+      subVisible: false
     };
   }
   render() {
@@ -24,22 +24,12 @@ class Menu extends React.Component {
   }
 
   _onMouseOut(e) {
-    e.target.style.backgroundColor = '';
+    e.target.style.backgroundColor = 'lightseagreen';
   }
 
   renderMainMenu() {
     return (
       <div id='mainMenu'>
-        <h4>
-          mainMenu&nbsp;
-          <button
-            onClick={() =>
-              this.setState({ subVisible: !this.state.subVisible })
-            }
-          >
-            toggleSub
-          </button>
-        </h4>
         <div>
           <Link
             onMouseOver={e => this._onMouseOver(e)}
@@ -64,13 +54,26 @@ class Menu extends React.Component {
           >
             heem
           </Link>
+          &nbsp;
+          <a
+            href='javascript: void(0)'
+            onMouseOver={e => this._onMouseOver(e)}
+            onMouseOut={e => this._onMouseOut(e)}
+            onClick={() =>
+              this.setState({ subVisible: !this.state.subVisible })
+            }
+          >
+            toggleSub
+          </a>
         </div>
       </div>
     );
   }
 
   renderSubMenu() {
-    return <div id='subMenu'>{this.state.subVisible && <h5>subMenu</h5>}</div>;
+    return (
+      <div id='subMenu'>{this.state.subVisible && <div>subMenu</div>}</div>
+    );
   }
 }
 

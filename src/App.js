@@ -5,21 +5,27 @@ import Home from './Home';
 import EventLinks from './EventLinks';
 import Event1 from './Event1';
 import Header from './Header';
+import './styles.css';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Menu />
-
           <Header />
+          <Menu />
           <Switch>
             <Route path='/elinks' component={EventLinks} />
             <Route
               path='/event1'
               render={props => {
-                return <Event1 title={'TITLE OF EVENT 1'} isAuthed={true} />;
+                return (
+                  <Event1
+                    title={'Frühlingssonne im Biesenthaler Becken'}
+                    date={'2019-03-24'}
+                    isAuthed={true}
+                  />
+                );
               }}
             />
             <Route component={Home} />

@@ -4,7 +4,7 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -17,6 +17,7 @@ module.exports = {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     'no-unused-vars': 'warn',
+    'react/prop-types': 'off',
     quotes: ['error', 'single'],
     semi: ['error', 'always']
   }

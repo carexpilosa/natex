@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx webpack-dev-server",
     "start": "npx webpack-dev-server",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "lint": "npx eslint ."
   },
   "author": "",
   "license": "ISC",

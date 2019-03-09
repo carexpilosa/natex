@@ -13,7 +13,9 @@ class App extends React.Component {
       <Router>
         <div>
           <Header />
-          <Menu />
+          <Switch>
+            <Menu />
+          </Switch>
           <Switch>
             <Route path='/elinks' component={EventLinks} />
             <Route

@@ -18,6 +18,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     'no-unused-vars': 'warn',
     'react/prop-types': 'off',
+    'no-console': 'warn',
     quotes: ['error', 'single'],
     semi: ['error', 'always']
   }

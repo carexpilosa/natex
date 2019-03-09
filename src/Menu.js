@@ -30,6 +30,9 @@ class Menu extends React.Component {
       <div id='mainMenu'>
         <div>
           <Link
+            className={
+              this.props.location.pathname === 'elinks' ? 'link' : 'nolink'
+            }
             onMouseOver={e => this._onMouseOver(e)}
             onMouseOut={e => this._onMouseOut(e)}
             to='/elinks'
@@ -69,6 +72,7 @@ class Menu extends React.Component {
   }
 
   renderSubMenu() {
+    console.log(this.props.location.pathname);
     return (
       <div id='subMenu'>{this.state.subVisible && <div>subMenu</div>}</div>
     );

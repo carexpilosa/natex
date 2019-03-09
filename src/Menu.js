@@ -1,15 +1,21 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import Home from './Home';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import EventLinks from './EventLinks';
 import Event1 from './Event1';
-import Header from './Header';
 
-export default class Skeleton extends React.Component {
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      subVisible: true
+    };
+  }
   render() {
     return (
-      <BrowserRouter>
-        <div>
+      <div>
+        <h3>Menu</h3>
+        <div id='mainMenu'>
+          mainMenu
           <div>
             <Link
               onMouseOver={e => this._onMouseOver(e)}
@@ -35,25 +41,26 @@ export default class Skeleton extends React.Component {
               heem
             </Link>
           </div>
-          <Header />
-          <Switch>
-            <Route path='/elinks' component={EventLinks} />
-            <Route
-              path='/event1'
-              render={props => {
-                return <Event1 title={'TITLE OF EVENT 1'} isAuthed={true} />;
-              }}
-            />
-            <Route component={Home} />
-          </Switch>
+          <button
+            onClick={() =>
+              this.setState({ subVisible: !this.state.subVisible })
+            }
+          >
+            toggleSub
+          </button>
         </div>
-      </BrowserRouter>
+        {this.state.subVisible && <div id='subMenu'>subMenu</div>}
+      </div>
     );
   }
+
   _onMouseOver(e) {
     e.target.style.backgroundColor = 'red';
   }
+
   _onMouseOut(e) {
     e.target.style.backgroundColor = '';
   }
 }
+
+export default Menu;

@@ -2,18 +2,18 @@ div {
   background-color: #eeeeee;
 }
 
-#mainMenu > div > a {
+/*#mainMenu > div > a {
   background-color: lightseagreen;
-}
+}*/
 
 #header > h2 {
   margin-bottom: 6px;
 }
 
 .link {
-  background-color: 'lightseagreen';
+  background-color: lightseagreen;
 }
 
 .nolink {
-  background-color: 'red';
+  background-color: red;
 }

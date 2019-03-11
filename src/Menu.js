@@ -11,6 +11,7 @@ class Menu extends React.Component {
   }
 
   render() {
+    console.log('RRRRRENDER', this.state);
     return (
       <div>
         {this.renderMainMenu()}
@@ -27,75 +28,42 @@ class Menu extends React.Component {
     const { pathname } = this.state;
     const links = [
       {
-        link: '/elinks',
+        href: '/elinks',
         label: 'Event Links'
       },
       {
-        link: '/event1',
+        href: '/event1',
         label: 'Event 1'
       },
       {
-        link: '/',
+        href: '/',
         label: 'Heem'
-      },
+      }
     ];
     return (
       <div id='mainMenu'>
         <div>
-          {
-            links.map(link => {
-              return (
-                <React.Fragment>
-                  <Link
-                    className={pathname === link.link ? 'link' : 'nolink'}
-                    onMouseOver={e =>
-                      pathname !== link.link ? this._onMouseOver(e) : undefined
-                    }
-                    onMouseOut={e =>
-                      pathname !== link.link ? this._onMouseOut(e) : undefined
-                    }
-                    to={link.link}
-                  >
-                    {link.label}
-                  </Link>
-                  &nbsp;
-                </React.Fragment>
-              )
-            })
-          }
-          {/*
-          <Link
-            className={pathname === '/elinks' ? 'link' : 'nolink'}
-            onMouseOver={e =>
-              pathname !== '/elinks' ? this._onMouseOver(e) : undefined
-            }
-            onMouseOut={e =>
-              pathname !== '/elinks' ? this._onMouseOut(e) : undefined
-            }
-            to='/elinks'
-          >
-            eventLinks
-          </Link>
-          &nbsp;
-          <Link
-            className={pathname === '/event1' ? 'link' : 'nolink'}
-            onMouseOver={e => this._onMouseOver(e)}
-            onMouseOut={e => this._onMouseOut(e)}
-            to='/event1'
-          >
-            event 1
-          </Link>
-          &nbsp;
-          <Link
-            className={pathname === '/' ? 'link' : 'nolink'}
-            onMouseOver={e => this._onMouseOver(e)}
-            onMouseOut={e => this._onMouseOut(e)}
-            to='/'
-          >
-            heem
-          </Link>
-          &nbsp;
-          */}
+          {links.map((link, idx) => {
+            const { href, label } = link;
+            return (
+              <React.Fragment key={`link_${idx}`}>
+                <Link
+                  className={pathname === href ? 'nolink' : 'link'}
+                  onMouseOver={e =>
+                    pathname !== href ? this._onMouseOver(e) : undefined
+                  }
+                  onMouseOut={e =>
+                    pathname !== href ? this._onMouseOut(e) : undefined
+                  }
+                  onClick={() => this.setState({ pathname, href })}
+                  to={href}
+                >
+                  {label}
+                </Link>
+                &nbsp;
+              </React.Fragment>
+            );
+          })}
           <a
             href='javascript: void(0)'
             onMouseOver={e => this._onMouseOver(e)}
@@ -112,13 +80,13 @@ class Menu extends React.Component {
   }
 
   _onMouseOver(e) {
-    e.target.style.backgroundColor = 'red';
-    return true;
+    //e.target.style.backgroundColor = 'red';
+    //return true;
   }
 
   _onMouseOut(e) {
-    e.target.style.backgroundColor = 'lightseagreen';
-    return true;
+    //e.target.style.backgroundColor = 'lightseagreen';
+    //return true;
   }
 
   renderSubMenu() {

@@ -18,7 +18,8 @@ class App extends React.Component {
           </Switch>
           <Switch>
             <Route path='/elinks' component={EventLinks} />
-            <Route path='/event1'
+            <Route
+              path='/event1'
               render={() => (
                 <Event1
                   title={'Frühlingssonne im Biesenthaler Becken'}

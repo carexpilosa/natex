@@ -9,6 +9,7 @@ class Menu extends React.Component {
       pathname: props.location.pathname
     };
   }
+
   render() {
     return (
       <div>

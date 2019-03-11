@@ -23,14 +23,6 @@ class Menu extends React.Component {
     return { pathname: nextProps.location.pathname };
   }
 
-  _onMouseOver(e) {
-    e.target.style.backgroundColor = 'red';
-  }
-
-  _onMouseOut(e) {
-    e.target.style.backgroundColor = 'lightseagreen';
-  }
-
   renderMainMenu() {
     const { pathname } = this.state;
     return (
@@ -78,6 +70,21 @@ class Menu extends React.Component {
         </div>
       </div>
     );
+  }
+  /**
+   * Only test comments.
+   * @constructor
+   * @_onMouseOver {object} an event object
+   * @return {boolean} default action is prevented if false
+   */
+  _onMouseOver(e) {
+    e.target.style.backgroundColor = 'red';
+    return true;
+  }
+
+  _onMouseOut(e) {
+    e.target.style.backgroundColor = 'lightseagreen';
+    return true;
   }
 
   renderSubMenu() {

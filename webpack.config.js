@@ -5,7 +5,8 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     open: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 8088
   },
   module: {
     rules: [

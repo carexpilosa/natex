@@ -25,11 +25,47 @@ class Menu extends React.Component {
 
   renderMainMenu() {
     const { pathname } = this.state;
+    const links = [
+      {
+        link: '/elinks',
+        label: 'Event Links'
+      },
+      {
+        link: '/event1',
+        label: 'Event 1'
+      },
+      {
+        link: '/',
+        label: 'Heem'
+      },
+    ];
     return (
       <div id='mainMenu'>
         <div>
+          {
+            links.map(link => {
+              return (
+                <div>
+                  <Link
+                    className={pathname === link.link ? 'link' : 'nolink'}
+                    onMouseOver={e =>
+                      pathname !== link.link ? this._onMouseOver(e) : undefined
+                    }
+                    onMouseOut={e =>
+                      pathname !== link.link ? this._onMouseOut(e) : undefined
+                    }
+                    to={link.link}
+                  >
+                    {link.label}
+                  </Link>
+                  &nbsp;
+                </div>
+              )
+            })
+          }
+          {/*
           <Link
-            className={pathname === 'elinks' ? 'link' : 'nolink'}
+            className={pathname === '/elinks' ? 'link' : 'nolink'}
             onMouseOver={e =>
               pathname !== '/elinks' ? this._onMouseOver(e) : undefined
             }
@@ -42,6 +78,7 @@ class Menu extends React.Component {
           </Link>
           &nbsp;
           <Link
+            className={pathname === '/event1' ? 'link' : 'nolink'}
             onMouseOver={e => this._onMouseOver(e)}
             onMouseOut={e => this._onMouseOut(e)}
             to='/event1'
@@ -50,6 +87,7 @@ class Menu extends React.Component {
           </Link>
           &nbsp;
           <Link
+            className={pathname === '/' ? 'link' : 'nolink'}
             onMouseOver={e => this._onMouseOver(e)}
             onMouseOut={e => this._onMouseOut(e)}
             to='/'
@@ -57,6 +95,7 @@ class Menu extends React.Component {
             heem
           </Link>
           &nbsp;
+          */}
           <a
             href='javascript: void(0)'
             onMouseOver={e => this._onMouseOver(e)}

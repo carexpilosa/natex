@@ -45,7 +45,7 @@ class Menu extends React.Component {
           {
             links.map(link => {
               return (
-                <div>
+                <React.Fragment>
                   <Link
                     className={pathname === link.link ? 'link' : 'nolink'}
                     onMouseOver={e =>
@@ -59,7 +59,7 @@ class Menu extends React.Component {
                     {link.label}
                   </Link>
                   &nbsp;
-                </div>
+                </React.Fragment>
               )
             })
           }

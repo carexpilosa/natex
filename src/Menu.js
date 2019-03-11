@@ -71,12 +71,7 @@ class Menu extends React.Component {
       </div>
     );
   }
-  /**
-   * Only test comments.
-   * @constructor
-   * @_onMouseOver {object} an event object
-   * @return {boolean} default action is prevented if false
-   */
+
   _onMouseOver(e) {
     e.target.style.backgroundColor = 'red';
     return true;

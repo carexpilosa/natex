@@ -8,6 +8,7 @@ class Menu extends React.Component {
       subVisible: false
     };
   }
+
   render() {
     return (
       <div>

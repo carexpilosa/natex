@@ -29,15 +29,18 @@ class Menu extends React.Component {
     const links = [
       {
         href: '/elinks',
-        label: 'Event Links'
+        label: 'Event Links',
+        id:'elinks'
       },
       {
         href: '/event1',
-        label: 'Event 1'
+        label: 'Event 1',
+        id:'event1'
       },
       {
         href: '/',
-        label: 'Heem'
+        label: 'Heem',
+        id:'heem'
       }
     ];
     return (
@@ -48,6 +51,7 @@ class Menu extends React.Component {
             return (
               <React.Fragment key={`link_${idx}`}>
                 <Link
+                  id={href}
                   className={pathname === href ? 'nolink' : 'link'}
                   onMouseOver={e =>
                     pathname !== href ? this._onMouseOver(e) : undefined
@@ -80,13 +84,11 @@ class Menu extends React.Component {
   }
 
   _onMouseOver(e) {
-    //e.target.style.backgroundColor = 'red';
-    //return true;
+    e.target.style.backgroundColor = 'red';
   }
 
   _onMouseOut(e) {
-    //e.target.style.backgroundColor = 'lightseagreen';
-    //return true;
+    e.target.style.backgroundColor = 'lightseagreen';
   }
 
   renderSubMenu() {

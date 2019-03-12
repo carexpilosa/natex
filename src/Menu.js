@@ -30,17 +30,20 @@ class Menu extends React.Component {
       {
         href: '/elinks',
         label: 'Event Links',
-        id:'elinks'
+        id: 'elinks',
+        submenu: true
       },
       {
         href: '/event1',
         label: 'Event 1',
-        id:'event1'
+        id:'event1',
+        submenu: false
       },
       {
         href: '/',
         label: 'Heem',
-        id:'heem'
+        id: 'heem',
+        submenu: true
       }
     ];
     return (
@@ -50,25 +53,27 @@ class Menu extends React.Component {
             const { href, label } = link;
             return (
               <React.Fragment key={`link_${idx}`}>
-                <Link
-                  id={href}
-                  className={pathname === href ? 'nolink' : 'link'}
-                  onMouseOver={e =>
-                    pathname !== href ? this._onMouseOver(e) : undefined
-                  }
-                  onMouseOut={e =>
-                    pathname !== href ? this._onMouseOut(e) : undefined
-                  }
-                  onClick={() => this.setState({ pathname, href })}
-                  to={href}
-                >
-                  {label}
-                </Link>
-                &nbsp;
+                {
+                  pathname === href
+                  ? <span className="activeItem">{label}&nbsp;</span>
+                  : <React.Fragment>
+                      <Link
+                        className="link"
+                        id={href}
+                        onMouseOver={e => this._onMouseOver(e)}
+                        onMouseOut={e => this._onMouseOut(e)}
+                        onClick={e => this._onClick(e, link)}
+                        to={href}
+                      >
+                        {label}
+                      </Link>
+                      &nbsp;
+                    </React.Fragment>
+                }
               </React.Fragment>
             );
           })}
-          <a
+          <a className="toggle"
             href='javascript: void(0)'
             onMouseOver={e => this._onMouseOver(e)}
             onMouseOut={e => this._onMouseOut(e)}
@@ -84,11 +89,19 @@ class Menu extends React.Component {
   }
 
   _onMouseOver(e) {
-    e.target.style.backgroundColor = 'red';
+    e.target.style.textDecoration = 'underline';
+    e.target.style.backgroundColor = 'green';
   }
 
   _onMouseOut(e) {
+    e.target.style.textDecoration = 'none';
     e.target.style.backgroundColor = 'lightseagreen';
+  }
+
+  _onClick(e, link) {
+    console.log(link);
+    this.setState({ pathname: link.href });
+    this.setState({ subVisible: link.submenu });
   }
 
   renderSubMenu() {

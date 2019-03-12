@@ -2,18 +2,19 @@ div {
   background-color: #eeeeee;
 }
 
-/*#mainMenu > div > a {
-  background-color: lightseagreen;
-}*/
-
 #header > h2 {
   margin-bottom: 6px;
 }
 
-.link {
+a.link, .toggle {
   background-color: lightseagreen;
+  text-decoration: none;
 }
 
-.nolink {
+a.nolink {
   background-color: red;
+}
+
+.activeItem {
+  font-weight: bold;
 }

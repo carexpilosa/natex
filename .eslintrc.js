@@ -14,12 +14,17 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    "indent": [2, 2, {"SwitchCase": 1}],
+    indent: [2, 2, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'unix'],
     'no-unused-vars': 'warn',
     'react/prop-types': 'off',
     'no-console': 'warn',
     quotes: ['error', 'single'],
     semi: ['error', 'always']
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 };

@@ -11,7 +11,6 @@ class Menu extends React.Component {
   }
 
   render() {
-    console.log('RRRRRENDER', this.state);
     return (
       <div>
         {this.renderMainMenu()}
@@ -27,12 +26,6 @@ class Menu extends React.Component {
   renderMainMenu() {
     const { pathname } = this.state;
     const links = [
-      //{
-      //  href: '/elinks',
-      //  label: 'Event Links',
-      //  id: 'elinks',
-      //  submenu: true
-      //},
       {
         href: '/event1',
         label: 'Event 1',
@@ -136,7 +129,6 @@ class Menu extends React.Component {
   }
 
   _onClick(e, link) {
-    console.log(link);
     this.setState({ pathname: link.href });
     this.setState({ subVisible: link.submenu });
   }

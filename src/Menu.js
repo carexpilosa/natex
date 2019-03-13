@@ -27,16 +27,52 @@ class Menu extends React.Component {
   renderMainMenu() {
     const { pathname } = this.state;
     const links = [
-      {
-        href: '/elinks',
-        label: 'Event Links',
-        id: 'elinks',
-        submenu: true
-      },
+      //{
+      //  href: '/elinks',
+      //  label: 'Event Links',
+      //  id: 'elinks',
+      //  submenu: true
+      //},
       {
         href: '/event1',
         label: 'Event 1',
-        id:'event1',
+        id: 'event1',
+        submenu: false
+      },
+      {
+        href: '/event2',
+        label: 'Event 2',
+        id: 'event2',
+        submenu: false
+      },
+      {
+        href: '/event3',
+        label: 'Event 3',
+        id: 'event3',
+        submenu: false
+      },
+      {
+        href: '/event4',
+        label: 'Event 4',
+        id: 'event4',
+        submenu: false
+      },
+      {
+        href: '/event5',
+        label: 'Event 5',
+        id: 'event5',
+        submenu: false
+      },
+      {
+        href: '/event6',
+        label: 'Event 6',
+        id: 'event6',
+        submenu: false
+      },
+      {
+        href: '/event7',
+        label: 'Event 7',
+        id: 'event7',
         submenu: false
       },
       {
@@ -53,27 +89,28 @@ class Menu extends React.Component {
             const { href, label } = link;
             return (
               <React.Fragment key={`link_${idx}`}>
-                {
-                  pathname === href
-                  ? <span className="activeItem">{label}&nbsp;</span>
-                  : <React.Fragment>
-                      <Link
-                        className="link"
-                        id={href}
-                        onMouseOver={e => this._onMouseOver(e)}
-                        onMouseOut={e => this._onMouseOut(e)}
-                        onClick={e => this._onClick(e, link)}
-                        to={href}
-                      >
-                        {label}
-                      </Link>
-                      &nbsp;
-                    </React.Fragment>
-                }
+                {pathname === href ? (
+                  <span className='activeItem'>{label}&nbsp;</span>
+                ) : (
+                  <React.Fragment>
+                    <Link
+                      className='link'
+                      id={href}
+                      onMouseOver={e => this._onMouseOver(e)}
+                      onMouseOut={e => this._onMouseOut(e)}
+                      onClick={e => this._onClick(e, link)}
+                      to={href}
+                    >
+                      {label}
+                    </Link>
+                    &nbsp;
+                  </React.Fragment>
+                )}
               </React.Fragment>
             );
           })}
-          <a className="toggle"
+          <a
+            className='toggle'
             href='javascript: void(0)'
             onMouseOver={e => this._onMouseOver(e)}
             onMouseOut={e => this._onMouseOut(e)}

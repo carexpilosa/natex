@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
-import Home from './Home';
 import EventLinks from './EventLinks';
 import Event1 from './Event1';
 import Header from './Header';
@@ -32,7 +31,8 @@ class App extends React.Component {
                 )}
               />
             ))}
-            <Route path='/'
+            <Route
+              path='/'
               render={() => (
                 <React.Fragment>
                   <h3>Aktuell:</h3>
@@ -40,7 +40,7 @@ class App extends React.Component {
                     title={eventData[0].title}
                     date={eventData[0].date}
                     contentHTML={eventData[0].contentHTML}
-                    />
+                  />
                 </React.Fragment>
               )}
             />

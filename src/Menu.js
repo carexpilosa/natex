@@ -52,22 +52,28 @@ class Menu extends React.Component {
       },
       {
         href: '/event5',
-        label: 'AUG',
+        label: 'JUL',
         id: 'event5',
         submenu: false
       },
       {
         href: '/event6',
-        label: 'SEP',
+        label: 'AUG',
         id: 'event6',
         submenu: false
       },
       {
         href: '/event7',
-        label: 'OKT',
+        label: 'SEP',
         id: 'event7',
         submenu: false
       },
+      {
+        href: '/event8',
+        label: 'OKT',
+        id: 'event8',
+        submenu: false
+      }
       //{
       //  href: '/',
       //  label: 'Heem',

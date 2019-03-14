@@ -75,21 +75,27 @@ const eventData = [
     contentHTML: ''
   },
   {
+    date: '2019-07-14',
+    title: 'Gamengrund',
+    path: '/event5',
+    contentHTML: ''
+  },
+  {
     date: '2019-08-18',
     title: 'Briesetal?? Vielleicht auch Gamengrund?',
-    path: '/event5',
+    path: '/event6',
     contentHTML: ''
   },
   {
     date: '2019-09-22',
     title: 'Müritz Nationalpark',
-    path: '/event6',
+    path: '/event7',
     contentHTML: ''
   },
   {
     date: '2019-10-20',
     title: 'Löcknitz',
-    path: '/event7',
+    path: '/event8',
     contentHTML: ''
   }
 ];

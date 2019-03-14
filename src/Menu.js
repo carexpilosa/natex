@@ -28,52 +28,52 @@ class Menu extends React.Component {
     const links = [
       {
         href: '/event1',
-        label: 'Event 1',
+        label: 'MÄR',
         id: 'event1',
         submenu: false
       },
       {
         href: '/event2',
-        label: 'Event 2',
+        label: 'APR',
         id: 'event2',
         submenu: false
       },
       {
         href: '/event3',
-        label: 'Event 3',
+        label: 'MAI',
         id: 'event3',
         submenu: false
       },
       {
         href: '/event4',
-        label: 'Event 4',
+        label: 'JUN',
         id: 'event4',
         submenu: false
       },
       {
         href: '/event5',
-        label: 'Event 5',
+        label: 'AUG',
         id: 'event5',
         submenu: false
       },
       {
         href: '/event6',
-        label: 'Event 6',
+        label: 'SEP',
         id: 'event6',
         submenu: false
       },
       {
         href: '/event7',
-        label: 'Event 7',
+        label: 'OKT',
         id: 'event7',
         submenu: false
       },
-      {
-        href: '/',
-        label: 'Heem',
-        id: 'heem',
-        submenu: true
-      }
+      //{
+      //  href: '/',
+      //  label: 'Heem',
+      //  id: 'heem',
+      //  submenu: true
+      //}
     ];
     return (
       <div id='mainMenu'>
@@ -102,17 +102,19 @@ class Menu extends React.Component {
               </React.Fragment>
             );
           })}
-          <a
-            className='toggle'
-            href='javascript: void(0)'
-            onMouseOver={e => this._onMouseOver(e)}
-            onMouseOut={e => this._onMouseOut(e)}
-            onClick={() =>
-              this.setState({ subVisible: !this.state.subVisible })
-            }
-          >
-            toggleSub
-          </a>
+          {
+            //<a
+            //  className='toggle'
+            //  href='javascript: void(0)'
+            //  onMouseOver={e => this._onMouseOver(e)}
+            //  onMouseOut={e => this._onMouseOut(e)}
+            //  onClick={() =>
+            //    this.setState({ subVisible: !this.state.subVisible })
+            //  }
+            //>
+            //  toggleSub
+            //</a>
+          }
         </div>
       </div>
     );

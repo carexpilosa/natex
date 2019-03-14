@@ -28,12 +28,22 @@ class App extends React.Component {
                     title={event.title}
                     date={event.date}
                     contentHTML={event.contentHTML}
-                    isAuthed={true}
                   />
                 )}
               />
             ))}
-            <Route path='/' component={Home} />
+            <Route path='/'
+              render={() => (
+                <React.Fragment>
+                  <h3>Aktuell:</h3>
+                  <Event1
+                    title={eventData[0].title}
+                    date={eventData[0].date}
+                    contentHTML={eventData[0].contentHTML}
+                    />
+                </React.Fragment>
+              )}
+            />
           </Switch>
         </div>
       </Router>

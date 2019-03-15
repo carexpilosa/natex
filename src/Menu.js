@@ -129,7 +129,7 @@ class Menu extends React.Component {
   _onMouseOver(e) {
     e.target.style.textDecoration = 'underline';
     e.target.style.backgroundColor = '#322408';
-    e.target.style.color = 'white';
+    e.target.style.color = '#D2E5F3';
   }
 
   _onMouseOut(e) {

@@ -1,6 +1,6 @@
 module.exports = {
   output: {
-    publicPath: '/'
+    publicPath: '/wandern/'
   },
   devtool: 'eval-source-map',
   devServer: {

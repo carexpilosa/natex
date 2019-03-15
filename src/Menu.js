@@ -27,49 +27,49 @@ class Menu extends React.Component {
     const { pathname } = this.state;
     const links = [
       {
-        href: '/event1',
+        href: '/wandern/event1',
         label: 'MÄR',
         id: 'event1',
         submenu: false
       },
       {
-        href: '/event2',
+        href: '/wandern/event2',
         label: 'APR',
         id: 'event2',
         submenu: false
       },
       {
-        href: '/event3',
+        href: '/wandern/event3',
         label: 'MAI',
         id: 'event3',
         submenu: false
       },
       {
-        href: '/event4',
+        href: '/wandern/event4',
         label: 'JUN',
         id: 'event4',
         submenu: false
       },
       {
-        href: '/event5',
+        href: '/wandern/event5',
         label: 'JUL',
         id: 'event5',
         submenu: false
       },
       {
-        href: '/event6',
+        href: '/wandern/event6',
         label: 'AUG',
         id: 'event6',
         submenu: false
       },
       {
-        href: '/event7',
+        href: '/wandern/event7',
         label: 'SEP',
         id: 'event7',
         submenu: false
       },
       {
-        href: '/event8',
+        href: '/wandern/event8',
         label: 'OKT',
         id: 'event8',
         submenu: false

@@ -12,13 +12,19 @@ div {
 
 a.link,
 .toggle {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a.link:visited,
 .toggle:visited {
   text-decoration: none;
   color: black;
+}
+
+a.link:hover,
+.toggle:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .activeItem {

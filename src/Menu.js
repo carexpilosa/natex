@@ -108,34 +108,9 @@ class Menu extends React.Component {
               </React.Fragment>
             );
           })}
-          {
-            //<a
-            //  className='toggle'
-            //  href='javascript: void(0)'
-            //  onMouseOver={e => this._onMouseOver(e)}
-            //  onMouseOut={e => this._onMouseOut(e)}
-            //  onClick={() =>
-            //    this.setState({ subVisible: !this.state.subVisible })
-            //  }
-            //>
-            //  toggleSub
-            //</a>
-          }
         </div>
       </div>
     );
-  }
-
-  _onMouseOver(e) {
-    e.target.style.textDecoration = 'underline';
-    e.target.style.backgroundColor = '#322408';
-    e.target.style.color = '#D2E5F3';
-  }
-
-  _onMouseOut(e) {
-    e.target.style.textDecoration = 'none';
-    e.target.style.backgroundColor = '#819F17';
-    e.target.style.color = 'black';
   }
 
   _onClick(e, link) {

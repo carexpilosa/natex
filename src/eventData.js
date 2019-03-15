@@ -2,7 +2,7 @@ const eventData = [
   {
     title: 'Frühlingssonne im Biesenthaler Becken',
     date: '2019-03-24',
-    path: '/wandern/event1',
+    path: '/event1',
     contentHTML: `<div>
   <p>
     Ich hoffe, dass sie sich herauslocken lässt, die Frühlingssonne. Auf
@@ -38,7 +38,7 @@ const eventData = [
   {
     title: 'Nonnenfließ 2019',
     date: '2009-04-07',
-    path: '/wandern/event2',
+    path: '/event2',
     contentHTML: `<div>
         <p>
           Wir treffen uns um ... Uhr auf dem Bahnsteig des Bahnhofs
@@ -65,37 +65,37 @@ const eventData = [
   {
     date: '2019-05-12',
     title: 'Geesower-Hügel – Salveytal. Oder woanders? Dorchetal?',
-    path: '/wandern/event3',
+    path: '/event3',
     contentHTML: ''
   },
   {
     date: '2019-06-23',
     title: 'Rüdersdorf Strausberg',
-    path: '/wandern/event4',
+    path: '/event4',
     contentHTML: ''
   },
   {
     date: '2019-07-14',
     title: 'Gamengrund',
-    path: '/wandern/event5',
+    path: '/event5',
     contentHTML: ''
   },
   {
     date: '2019-08-18',
     title: 'Briesetal?? Vielleicht auch Gamengrund?',
-    path: '/wandern/event6',
+    path: '/event6',
     contentHTML: ''
   },
   {
     date: '2019-09-22',
     title: 'Müritz Nationalpark',
-    path: '/wandern/event7',
+    path: '/event7',
     contentHTML: ''
   },
   {
     date: '2019-10-20',
     title: 'Löcknitz',
-    path: '/wandern/event8',
+    path: '/event8',
     contentHTML: ''
   }
 ];

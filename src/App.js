@@ -10,7 +10,7 @@ import './styles.css';
 class App extends React.Component {
   render() {
     return (
-      <Router>
+      <Router basename='/wandern'>
         <div>
           <Header />
           <Switch>

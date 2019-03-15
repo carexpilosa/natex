@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack-dev-server",
-    "start": "npx webpack-dev-server",
+    "dev": "npx webpack-dev-server --public localhost:8088/wandern/",
+    "start": "npx webpack-dev-server --public localhost:8088/wandern",
     "build": "npx webpack",
     "lint": "npx eslint ."
   },
@@ -25,7 +25,6 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
-    "html-webpack-plugin": "^3.2.0",
     "jsdoc": "^3.5.5",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

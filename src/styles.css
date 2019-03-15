@@ -1,5 +1,5 @@
 div {
-  background-color: #eeeeee;
+  background-color: #819f17;
 }
 
 #header > h2 {
@@ -8,17 +8,13 @@ div {
 
 a.link,
 .toggle {
-  background-color: lightseagreen;
   text-decoration: none;
 }
 
-.link:active,
-.toggle:active {
-  color: yellow;
-}
-
-a.nolink {
-  background-color: red;
+a.link:visited,
+.toggle:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .activeItem {

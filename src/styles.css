@@ -44,13 +44,14 @@ a.link:hover,
 }
 
 div#leftContent {
-  width: 45%;
+  width: 46%;
+  padding: 1em;
   background-color: #9dc52b;
 }
 
 div#rightContent {
-  width: 45%;
-  padding: 1em;
+  width: 46%;
+  padding-left: 1em;
 }
 
 #rightImg {
@@ -66,5 +67,10 @@ div#rightContent {
   }
   div#rightContent {
     width: 100%;
+    padding-left: 0px;
+  }
+  #rightImg {
+    width: 100%;
+    padding-top: 1em;
   }
 }

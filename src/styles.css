@@ -3,7 +3,10 @@ body {
 }
 
 div#leftContent {
+  width: 50%;
+  min-width: 450px;
   background-color: #9dc52b;
+  margin: 10px;
 }
 
 #header > h2 {
@@ -13,7 +16,6 @@ div#leftContent {
 a.link,
 .toggle {
   text-decoration: underline;
-  color: black;
 }
 
 a.link:visited,
@@ -45,10 +47,25 @@ a.link:hover,
 
 .appContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 40em) {
-  div#rightContent {
-    background-image: url('/wandern/img/hellbach.jpeg');
-  }
+div#rightContent {
+  margin: 10px;
 }
+
+#rightContent img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+/*@media only screen and (max-width: 600px) {
+  div#rightContent {
+    display: none;
+  }
+
+  div#leftContent {
+    width: 100%;
+  }
+}*/

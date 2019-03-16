@@ -60,7 +60,8 @@ div#rightContent {
 
 @media only screen and (max-width: 46em) {
   div#leftContent {
-    width: 100%;
+    width: 99.8%;
+    padding: 0em;
   }
   .appContainer {
     display: block;

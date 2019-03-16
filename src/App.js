@@ -48,7 +48,7 @@ class App extends React.Component {
             </Switch>
           </div>
           <div id='rightContent'>
-            <img src='./img/hellbach.jpeg' alt='hellbach' />
+            <img id='rightImg' src='./img/hellbach.jpeg' alt='hellbach' />
           </div>
         </React.Fragment>
       </Router>

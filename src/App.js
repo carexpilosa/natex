@@ -11,41 +11,46 @@ class App extends React.Component {
   render() {
     return (
       <Router basename='/wandern'>
-        <div>
-          <Header />
-          <Switch>
-            <Menu />
-          </Switch>
-          <Switch>
-            <Route path='/elinks' component={EventLinks} />
-            {eventData.map((event, idx) => (
+        <React.Fragment>
+          <div id='leftContent'>
+            <Header />
+            <Switch>
+              <Menu />
+            </Switch>
+            <Switch>
+              <Route path='/elinks' component={EventLinks} />
+              {eventData.map((event, idx) => (
+                <Route
+                  key={idx}
+                  path={event.path}
+                  render={() => (
+                    <Event1
+                      title={event.title}
+                      date={event.date}
+                      contentHTML={event.contentHTML}
+                    />
+                  )}
+                />
+              ))}
               <Route
-                key={idx}
-                path={event.path}
+                path='/'
                 render={() => (
-                  <Event1
-                    title={event.title}
-                    date={event.date}
-                    contentHTML={event.contentHTML}
-                  />
+                  <React.Fragment>
+                    <h3>Aktuell:</h3>
+                    <Event1
+                      title={eventData[0].title}
+                      date={eventData[0].date}
+                      contentHTML={eventData[0].contentHTML}
+                    />
+                  </React.Fragment>
                 )}
               />
-            ))}
-            <Route
-              path='/'
-              render={() => (
-                <React.Fragment>
-                  <h3>Aktuell:</h3>
-                  <Event1
-                    title={eventData[0].title}
-                    date={eventData[0].date}
-                    contentHTML={eventData[0].contentHTML}
-                  />
-                </React.Fragment>
-              )}
-            />
-          </Switch>
-        </div>
+            </Switch>
+          </div>
+          <div id='rightContent'>
+            <img src='./img/hellbach.jpeg' alt='hellbach' />
+          </div>
+        </React.Fragment>
       </Router>
     );
   }

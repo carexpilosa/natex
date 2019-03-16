@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx webpack-dev-server --public localhost:8088/wandern/",
+    "dev": "npx webpack-dev-server",
     "start": "npx webpack-dev-server --public localhost:8088/wandern",
     "build": "npx webpack",
     "lint": "npx eslint ."

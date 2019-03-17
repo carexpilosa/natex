@@ -8,10 +8,6 @@ import eventData from './eventData';
 
 import './styles.css';
 
-const Home = () => {
-  return <h5>HOME</h5>;
-};
-
 class App extends React.Component {
   render() {
     {
@@ -33,27 +29,6 @@ class App extends React.Component {
       );
     }
   }
-  /*render() {
-    return (
-      <Router basename='/wandern'>
-        <Switch>
-          {eventData.map((event, idx) => (
-            <Route
-              key={idx}
-              path={event.path}
-              render={() => (
-                <Event
-                  title={event.title}
-                  date={event.date}
-                  contentHTML={event.contentHTML}
-                />
-              )}
-            />
-          ))}
-        </Switch>
-      </Router>
-    );
-  }*/
 }
 
 export default App;

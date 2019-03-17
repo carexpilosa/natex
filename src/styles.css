@@ -28,7 +28,8 @@ a.link:hover,
   color: white;
 }
 
-#container {
+#container,
+#mainMenu {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -59,19 +60,7 @@ div#rightContent {
 }
 
 @media only screen and (max-width: 46em) {
-  div#leftContent {
-    width: 99.8%;
-    padding: 0em;
-  }
-  .appContainer {
-    display: block;
-  }
-  div#rightContent {
-    width: 100%;
-    padding-left: 0px;
-  }
-  #rightImg {
-    width: 100%;
-    padding-top: 1em;
+  #container {
+    flex-direction: column;
   }
 }

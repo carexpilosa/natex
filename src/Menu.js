@@ -83,30 +83,28 @@ class Menu extends React.Component {
     ];
     return (
       <div id='mainMenu'>
-        <div id='container'>
-          {links.map((link, idx) => {
-            const { href, label } = link;
-            return (
-              <React.Fragment key={`link_${idx}`}>
-                {pathname === href ? (
-                  <div className='activeItem menuDiv'>{label}&nbsp;</div>
-                ) : (
-                  <div className='menuDiv'>
-                    <Link
-                      className='link'
-                      id={href}
-                      onClick={e => this._onClick(e, link)}
-                      to={href}
-                    >
-                      {label}
-                    </Link>
-                    &nbsp;
-                  </div>
-                )}
-              </React.Fragment>
-            );
-          })}
-        </div>
+        {links.map((link, idx) => {
+          const { href, label } = link;
+          return (
+            <React.Fragment key={`link_${idx}`}>
+              {pathname === href ? (
+                <div className='activeItem menuDiv'>{label}&nbsp;</div>
+              ) : (
+                <div className='menuDiv'>
+                  <Link
+                    className='link'
+                    id={href}
+                    onClick={e => this._onClick(e, link)}
+                    to={href}
+                  >
+                    {label}
+                  </Link>
+                  &nbsp;
+                </div>
+              )}
+            </React.Fragment>
+          );
+        })}
       </div>
     );
   }

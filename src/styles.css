@@ -28,6 +28,11 @@ a.link:hover,
   color: white;
 }
 
+#container {
+  background-color: #9dc52b;
+  padding: 1em;
+}
+
 #container,
 #mainMenu {
   display: flex;
@@ -36,7 +41,9 @@ a.link:hover,
 }
 
 .menuDiv {
+  background-color: #9dc52b;
   width: 2.6em;
+  margin-bottom: 1em;
 }
 
 .appContainer {
@@ -46,21 +53,27 @@ a.link:hover,
 
 div#leftContent {
   width: 46%;
-  padding: 1em;
+  padding-right: 1em;
   background-color: #9dc52b;
 }
 
 div#rightContent {
   width: 46%;
   padding-left: 1em;
+  background-color: #9dc52b;
 }
 
 #rightImg {
-  width: 95%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 46em) {
   #container {
     flex-direction: column;
+  }
+  div#leftContent,
+  div#rightContent {
+    width: 98%;
+    padding: 0em;
   }
 }

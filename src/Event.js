@@ -5,6 +5,7 @@ class Event extends React.Component {
     const { title, date, contentHTML, image } = this.props.data;
     let imgSrc;
     if ('_self' in React.createElement('div')) {
+      //true only for development mode of webpack
       imgSrc = require(`./img/${image}`);
     } else {
       imgSrc = `./img/${image}`;

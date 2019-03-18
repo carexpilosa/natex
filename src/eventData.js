@@ -3,7 +3,9 @@ const eventData = [
     title: 'Frühlingssonne im Biesenthaler Becken',
     date: '2019-03-24',
     path: '/event1',
+    id: '/event1',
     image: 'hellbach.jpeg',
+    label: 'MÄR',
     contentHTML: `<div>
   <p>
     Ich hoffe, dass sie sich herauslocken lässt, die Frühlingssonne. Auf
@@ -40,7 +42,9 @@ const eventData = [
     title: 'Nonnenfließ 2019',
     date: '2009-04-07',
     path: '/event2',
+    id: '/event2',
     image: 'nonnenfliess.jpeg',
+    label: 'APR',
     contentHTML: `<div>
         <p>
           Wir treffen uns um ... Uhr auf dem Bahnsteig des Bahnhofs
@@ -68,42 +72,54 @@ const eventData = [
     date: '2019-05-12',
     title: 'Geesower-Hügel – Salveytal. Oder woanders? Dorchetal?',
     path: '/event3',
-    image: 'nonnenfliess.jpeg',
+    id: '/event3',
+    image: 'symbolbild.jpeg',
+    label: 'MAI',
     contentHTML: ''
   },
   {
     date: '2019-06-23',
     title: 'Rüdersdorf Strausberg',
     path: '/event4',
-    image: 'nonnenfliess.jpeg',
+    id: '/event4',
+    image: 'strausberg.jpeg',
+    label: 'JUN',
     contentHTML: ''
   },
   {
     date: '2019-07-14',
     title: 'Gamengrund',
     path: '/event5',
-    image: 'nonnenfliess.jpeg',
+    id: '/event5',
+    image: 'gamensee.jpeg',
+    label: 'JUL',
     contentHTML: ''
   },
   {
     date: '2019-08-18',
-    title: 'Briesetal?? Vielleicht auch Gamengrund?',
+    title: 'Briesetal?',
     path: '/event6',
-    image: 'nonnenfliess.jpeg',
+    id: '/event6',
+    image: 'briesetal.jpeg',
+    label: 'AUG',
     contentHTML: ''
   },
   {
     date: '2019-09-22',
     title: 'Müritz Nationalpark',
     path: '/event7',
-    image: 'nonnenfliess.jpeg',
+    id: '/event7',
+    image: 'mueritznp.jpeg',
+    label: 'SEP',
     contentHTML: ''
   },
   {
     date: '2019-10-20',
-    title: 'Löcknitz',
+    title: 'Löcknitztal',
     path: '/event8',
-    image: 'nonnenfliess.jpeg',
+    id: '/event8',
+    image: 'loecknitz.jpeg',
+    label: 'OKT',
     contentHTML: ''
   }
 ];

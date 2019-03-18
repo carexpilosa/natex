@@ -3,7 +3,13 @@ import React from 'react';
 class Event extends React.Component {
   render() {
     const { title, date, contentHTML, image } = this.props.data;
-    const imgSrc = require(`./img/${image}`);
+    let imgSrc;
+    if ('_self' in React.createElement('div')) {
+      imgSrc = require(`./img/${image}`);
+    } else {
+      imgSrc = `./img/${image}`;
+    }
+
     return (
       <div id='container'>
         <div id='leftContent'>

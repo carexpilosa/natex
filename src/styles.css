@@ -13,6 +13,7 @@ body {
 
 a.link,
 .toggle {
+  color: black;
   text-decoration: underline;
 }
 

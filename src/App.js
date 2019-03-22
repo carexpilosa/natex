@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
 //import EventLinks from './EventLinks';
 import Event from './Event';
-//import Header from './Header';
+import Header from './Header';
 import eventData from './eventData';
 
 import './styles.css';
@@ -13,7 +13,8 @@ class App extends React.Component {
     {
       return (
         <Router basename='/wandern'>
-          <React.Fragment>
+          <div id="frame">
+            <Header />
             <Route path='/' component={Menu} />
             <Switch>
               {eventData.map((event, idx) => {
@@ -24,7 +25,7 @@ class App extends React.Component {
                 );
               })}
             </Switch>
-          </React.Fragment>
+          </div>
         </Router>
       );
     }

@@ -7,6 +7,10 @@ body {
   margin-bottom: 6px;
 }
 
+#leftContent > h3 {
+  margin-top: 0px;
+}
+
 a.link,
 .toggle {
   text-decoration: underline;
@@ -29,9 +33,9 @@ a.link:hover,
   color: white;
 }
 
-#container {
+#frame {
+  padding: 0em 1em 1em 1em;
   background-color: #9dc52b;
-  padding: 1em;
 }
 
 #container,

@@ -46,27 +46,33 @@ const eventData = [
     image: 'nonnenfliess.jpeg',
     label: 'APR',
     contentHTML: `<div>
-        <p>
-          Wir treffen uns um ... Uhr auf dem Bahnsteig des Bahnhofs
-          Gesundbrunnen zwischen den Gleisen 9 und 10 am Fahrkartenautomaten.
-          Hier kaufen wir Fahrkarten für alle, die noch eine brauchen. Wir
-          suchen dann die günstigste Variante heraus.
-        </p>
-        <p>
-          Abfahrt mit dem Regionalexpress ist ... Uhr, Ankunft in Eberswalde um
-          ... Uhr. Vom Bahnhof Eberswalde gehen wir noch ca. 2 km durch die
-          Stadt und dann weiter auf Waldwegen und Pfaden: Wir durchqueren schöne
-          (unter anderem Buchen-) Wälder entlang von Schwärze und Nonnenfließ.
-          Unser Ziel, den Bahnhof Melchow, erreichen wir nach ca. 17 bis 18 km.
-          Von hier fährt etwa stündlich eine Regionalbahn (RB60) Richtung
-          Berlin.
-        </p>
-
-        <p>
-          Meine Telefonnummer: 01573 8091368. Bitte kurz vor dem Termin an
-          dieser Stelle auf aktuelle Änderungen achten!
-        </p>
-      </div>`
+    <p>
+      In diesem Jahr möchte ich die Nonnenfließ-Tour "anders herum" machen, also
+      <strong>von Melchow starten und - ohne Verlängerungsoption - nach 16,5 km in
+      Eberswalde ankommen</strong>.
+    </p>
+    <p>
+      Wir treffen uns um <strong>10:20 Uhr auf dem Bahnsteig des Bahnhofs Gesundbrunnen
+      zwischen den Gleisen 9 und 10 am Fahrkartenautomaten</strong>. Hier kaufen wir
+      <strong>Fahrkarten</strong> für alle, die noch eine brauchen. Wir suchen die günstigste
+      Variante heraus.
+    </p>
+    <p>
+      <strong>Abfahrt mit dem Regionalexpress ist 10:39 Uhr, Ankunft in Melchow um 11:18
+      Uhr</strong>. Von dort aus gehen wir eine längerere Strecke durch den Wald und dann
+      über Nonnenfließ und Schwärze nach Eberswalde. Von Eberswalde fahren ca.
+      halbstündig Züge nach Berlin.
+    </p>
+    <p>
+      <strong>
+        Es gibt leider bei dieser Wanderung keine Möglichkeit, zwischendurch auszusteigen.
+      </strong>
+    </p>
+    <p>
+      Meine Telefonnummer: <strong>01573 8091368</strong>. Bitte kurz vor dem Termin an dieser
+      Stelle auf aktuelle Änderungen achten!
+    </p>
+  </div>`
   },
   {
     date: '2019-05-12',

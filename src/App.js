@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
-//import EventLinks from './EventLinks';
+import Home from './Home';
 import Event from './Event';
 import Header from './Header';
+import Footer from './Footer';
 import eventData from './eventData';
 
 import './styles.css';
@@ -13,7 +14,7 @@ class App extends React.Component {
     {
       return (
         <Router basename='/wandern'>
-          <div id="frame">
+          <div id='frame'>
             <Header />
             <Route path='/' component={Menu} />
             <Switch>
@@ -24,7 +25,9 @@ class App extends React.Component {
                   </Route>
                 );
               })}
+              <Route path='/' component={Home} />
             </Switch>
+            <Footer />
           </div>
         </Router>
       );
